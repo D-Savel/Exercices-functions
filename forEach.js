@@ -9,4 +9,7 @@ const for_Each = (array, fction) => {
 fction = (elem) => '<' + (elem).toString() + '>'
 
 console.log(for_Each([1, 'r', 15, 'Name'], fction))
+console.log('##########')
 console.log(for_Each([1, 'r', 15, 'Name'], (elem) => typeof (elem) === 'number' ? elem : NaN))
+console.log('##########')
+for_Each([1, 'r', 15, 'Name'], (elem) => console.log(elem))
