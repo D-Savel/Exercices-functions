@@ -8,15 +8,7 @@ const reverseStr = (string) => {
 }
 
 const isPalindrome = (string) => {
-  let reverse = string
-    .split('')
-    .reverse()
-    .join('')
-  if (reverse === string) {
-    return true
-  } else {
-    return false
-  }
+  return reverseStr(string) === string
 }
 
 console.log(`pour le mot bonjour la fonction reverseStr retourne ${reverseStr('bonjour!')}`)
