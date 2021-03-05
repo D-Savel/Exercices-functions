@@ -1,5 +1,10 @@
+const NBWHEELS_MONOCYCLE = 1
+const NBWHEELS_MOTO = 2
+const NBWHEELS_VOITURE = 4
+const NBWHEELS_LIMOUSINE = 6
+
 const countWheels = (nb_monocycle, nb_moto, nb_voiture, nb_limousine) => {
-  return nb_monocycle + nb_moto * 2 + nb_voiture * 4 + nb_limousine * 6
+  return nb_monocycle * NBWHEELS_MONOCYCLE + nb_moto * NBWHEELS_MOTO + nb_voiture * NBWHEELS_VOITURE + nb_limousine * NBWHEELS_LIMOUSINE
 }
 
 console.log(countWheels(10, 20, 7, 2) === 90)
