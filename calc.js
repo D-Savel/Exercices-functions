@@ -6,7 +6,7 @@ const sub = (nb1, nb2) => {
   return nb1 - nb2
 }
 
-const smul = (nb1, nb2) => {
+const mul = (nb1, nb2) => {
   return nb1 * nb2
 }
 
@@ -14,21 +14,22 @@ const div = (nb1, nb2) => {
   return nb1 / nb2
 }
 
-const calc = (nb1, nb2, operator) => {
+const calc = (operator, nb1, nb2) => {
   switch (operator) {
     case '+':
       return add(nb1, nb2)
-      break;
     case '-':
       return sub(nb1, nb2)
-      break;
     case 'x':
       return mul(nb1, nb2)
-      break;
     case '/':
       return div(nb1, nb2)
-      break;
+    default:
+      return 'opérateur non connu'
   }
 }
 
-console.log(calc(10, 2, '/'))
+console.log(calc('-', 10, 2,))
+console.log(calc('+', 10, 2,))
+console.log(calc('x', 10, 2,))
+console.log(calc('%', 10, 2,))
