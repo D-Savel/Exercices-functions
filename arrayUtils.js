@@ -2,7 +2,7 @@
 //array corespond à un tableau de nombre de forme [nb, nb1, nb3, ...]
 
 const biggest = (array) => {
-  let number = 0
+  let number = array[0]
   for (const elem of array) {
     elem > number ? number = elem : ''
   }
