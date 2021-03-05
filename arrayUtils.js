@@ -15,19 +15,19 @@ const sortAscend = (array) => {
   return array.sort((a, b) => a - b)
 }
 
-console.log(`le plus grand nombre du tableau [99, 100, 101, 1] est ${biggest([99, 100, 101, 1])}`)
+//console.log(`le plus grand nombre du tableau [99, 100, 101, 1] est ${biggest([99, 100, 101, 1])}`)
 
 
-console.log("\nVoici le tableau [99, 100, 101, 1] dans l'ordre croissant :")
-console.log(sortAscend([99, 100, 101, 1]))
+//console.log("\nVoici le tableau [99, 100, 101, 1] dans l'ordre croissant :")
+//console.log(sortAscend([99, 100, 101, 1]))
 
 const makeUnique = (array) => {
   let newarray = []
   for (const elem of array) {
     !newarray.includes(elem) ? newarray.push(elem) : ''
   }
-  return newarray
+  return sortAscend(newarray)
 }
 
-console.log("\nVoici le tableau [1, 2, 8, 3, 8, 4, 5, 5, 5, 1] sans doublon triés dans l'ordre croissant :")
+console.log("\nVoici le tableau [1, 2, 8, 3, 8, 4, 5, 5, 5, 1] sans doublon trié dans l'ordre croissant :")
 console.log(sortAscend(makeUnique([1, 2, 8, 3, 8, 4, 5, 5, 5, 1])))
